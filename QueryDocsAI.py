@@ -1,6 +1,4 @@
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import sqlite3
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 import streamlit as st
@@ -107,5 +105,3 @@ if btn:
 
         if 'history' not in st.session_state:
             st.session_state.history=''
-
-
