@@ -11,7 +11,9 @@ from langchain_core.output_parsers import StrOutputParser
 import chromadb
 import shutil
 import time
-
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 chromadb.api.client.SharedSystemClient.clear_system_cache()
 db_path = 'db'
