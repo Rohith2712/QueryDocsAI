@@ -31,3 +31,4 @@ class DocumentHandler:
         embedding = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
         db = FAISS.from_documents(texts, embedding)
         st.session_state.vs = db
+        st.write('**:green[Data Uploaded Successfully!]**')
