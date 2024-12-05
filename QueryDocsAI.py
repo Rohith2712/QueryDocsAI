@@ -26,7 +26,7 @@ from langchain_community.vectorstores import FAISS
 
 # remove_db_with_retry(db_path)
 
-os.environ['GOOGLE_API_KEY']='AIzaSyAZ2gCeGU1jEj4t0uB2jmjZNtlZUTb_n1c'
+os.environ['GOOGLE_API_KEY']= st.secrets["GOOGLE_API_KEY"]
 st.set_page_config(page_title="QueryDocsAI",page_icon="📝")
 llm = ChatGoogleGenerativeAI(model="gemini-pro",convert_system_message_to_human=True)
 
